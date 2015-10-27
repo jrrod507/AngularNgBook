@@ -1,0 +1,27 @@
+
+
+html, body {height:100%;margin: 0;padding: 0;border: 0;outline: 0;width: 100%;}
+#topbar {width:100%; min-width: 800px;height:80px; /* overflow: auto; *//* border: 1px solid green; */ background-color:green;}
+#sidebar {width: 15%; /* min-width: 244px; *//* height: 100%; */ /* border: 1px solid blue; */ background-color:blue; /* float:left; */position: absolute;top: 80px;left: 0;bottom: 0;color: white;z-index: 10;}
+#content {width: 70%; /* min-width: 524px; *//* height:600px; */ /* border: 1px solid orange; */ background-color:orange; /* float:left; */position: absolute;bottom: 0;top: 80px;left: 15%;right: 0;}
+#action-bar {/* width:200px; */ /* height: 600px; */ /* border:1px solid red; */ background-color: red; /* float:right; */position: absolute;top: 80px;right: 0;bottom: 0;width: 15%;/* min-width: 244px; */}
+#action-bar::after {clear:both;}
+.search {width: 50%; min-width: 380px; float: left; background-color: lightblue; height: 100%;}
+.filters {float: right; width:49%; min-width: 380px;height: 100%;}
+.filters .filter {width: 19%; min-width: 70px; overflow: auto;float: right; background-color: lightcoral; height: 100%; border-right: 1px solid black;}
+
+@media only screen and (max-width: 1024px) {
+    #sidebar {
+        width:25%;
+        left:0;
+    }
+
+    #content {
+        width:50%;
+        left:25%;
+    }
+
+    #action-bar {
+        width:25%;
+    }
+}

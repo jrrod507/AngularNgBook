@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The AngularJS ng-book</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel='stylesheet' href='css/responsive.css'/>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js'></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+        <div id='topbar'>
+            <div class='search'></div>
+            <div class="filters">
+                <div class='filter'></div>
+                <div class='filter'></div>
+                <div class='filter'></div>
+                <div class='filter'></div>
+                <div class='filter'></div>
+                <div style='clear: both; height: 0; width:0'></div>
+            </div>
+            
+        </div>
+        <div ng-app="MyApp" style="border:1px solid lightblue">
+            <div ng-controller="MyCtrl">
+                <input ng-model="name" type="text" placeholder="Your name">
+                <h1>Hello {{ name | uppercase}}</h1>
+                <h1>The system time is: {{ clock.now}}</h1>
+                <br>
+            </div>
+            <div ng-controller="MyController2">
+                <div style="font-size:4em; color:red; font-family: cursive">
+                    <!-- {{'ginger loves dog bones'| capitalize}}-->
+                    {{appName}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
